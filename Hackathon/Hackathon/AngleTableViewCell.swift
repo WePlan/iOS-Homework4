@@ -10,6 +10,11 @@ import UIKit
 
 class AngleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var CompanyImage: AsyncImageView!
+    
+    @IBOutlet weak var Companytitle: UILabel!
+    
+    @IBOutlet weak var Jobtitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
