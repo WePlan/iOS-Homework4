@@ -1,30 +1,23 @@
 //
-//  DataFeed.swift
+//  DataFeedViewController.swift
 //  Hackathon
 //
 //  Created by xi su on 4/14/15.
 //  Copyright (c) 2015 NYU-poly. All rights reserved.
 //
 
-
+import UIKit
 import UIKit
 //import Alamofire
-
-class ViewController: UIViewController {
-    let redirectURI = "https://www.facebook.com/suzie.su.18"
-    let mainURI = "https://www.facebook.com/suzie.su.18"
-    let ClientID = "b8dfb3bb446b56cdb77024884bff26e91e82d6c604440db0"
-    let Token = "ea35df8ec5d8542d06b196d4a50bba2ac34616d448bfd3c0"
+class DataFeedViewController: UIViewController {
+    
     var json:JSON = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        let URL =  NSURL(string: "https://api.angel.co/1/jobs?access_token=ea35df8ec5d8542d06b196d4a50bba2ac34616d448bfd3c0")
-        //        var manager = Alamofire.Manager.sharedInstance
-        //        var request = manager.request(NSMutableURLRequest(URL: URL!))
         for i in 1...10{
-            var requestitem = request(.GET, "https://api.angel.co/1/jobs?access_token=ea35df8ec5d8542d06b196d4a50bba2ac34616d448bfd3c0&page=\(i)")
+            var requestItem = request(.GET, "https://api.angel.co/1/jobs?access_token=ea35df8ec5d8542d06b196d4a50bba2ac34616d448bfd3c0&page=\(i)")
             
-            requestitem.responseJSON{
+            requestItem.responseJSON{
                 (request,response,data,error) in
                 self.json = JSON(data!)
                 println(self.json)
@@ -62,13 +55,24 @@ class ViewController: UIViewController {
                 
             }
         }
-        
+
+        // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

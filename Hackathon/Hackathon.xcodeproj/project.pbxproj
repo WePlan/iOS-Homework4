@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		54C7F7121ADDCC6E008BD2BB /* DataFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7F7111ADDCC6E008BD2BB /* DataFeed.swift */; };
+		54C7F7141ADDCF01008BD2BB /* DataFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7F7131ADDCF01008BD2BB /* DataFeedViewController.swift */; };
 		66588BE61ADCD14A0019BD3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66588BE51ADCD14A0019BD3D /* AppDelegate.swift */; };
 		66588BEB1ADCD14A0019BD3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66588BE91ADCD14A0019BD3D /* Main.storyboard */; };
 		66588BED1ADCD14A0019BD3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66588BEC1ADCD14A0019BD3D /* Images.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		1D36F0F0543A697AB755AD76 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		54C7F7111ADDCC6E008BD2BB /* DataFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFeed.swift; sourceTree = "<group>"; };
+		54C7F7131ADDCF01008BD2BB /* DataFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFeedViewController.swift; sourceTree = "<group>"; };
 		66588BE01ADCD14A0019BD3D /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66588BE41ADCD14A0019BD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66588BE51ADCD14A0019BD3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				66588BE91ADCD14A0019BD3D /* Main.storyboard */,
 				66588C051ADCD24B0019BD3D /* MainViewController.swift */,
 				54C7F7111ADDCC6E008BD2BB /* DataFeed.swift */,
+				54C7F7131ADDCF01008BD2BB /* DataFeedViewController.swift */,
 				66DCBA091ADCE0A4002939B2 /* MainTableViewCell.swift */,
 				66DCBA0B1ADCE2C6002939B2 /* DetailViewController.swift */,
 				66E977DE1ADD8E2200D56C55 /* PictureViewController.swift */,
@@ -332,6 +335,7 @@
 			files = (
 				668973701ADCD8CE00CBDA10 /* Alamofire.swift in Sources */,
 				66588BE61ADCD14A0019BD3D /* AppDelegate.swift in Sources */,
+				54C7F7141ADDCF01008BD2BB /* DataFeedViewController.swift in Sources */,
 				66588C061ADCD24B0019BD3D /* MainViewController.swift in Sources */,
 				66DCBA0C1ADCE2C6002939B2 /* DetailViewController.swift in Sources */,
 				66E977E11ADDCF8900D56C55 /* AngleListTableViewController.swift in Sources */,
