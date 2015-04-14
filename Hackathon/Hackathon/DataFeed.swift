@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Alamofire
+//import Alamofire
 
 class ViewController: UIViewController {
     let redirectURI = "https://www.facebook.com/suzie.su.18"
@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         //        var manager = Alamofire.Manager.sharedInstance
         //        var request = manager.request(NSMutableURLRequest(URL: URL!))
         for i in 1...10{
-            var request = Alamofire.request(.GET, "https://api.angel.co/1/jobs?access_token=ea35df8ec5d8542d06b196d4a50bba2ac34616d448bfd3c0&page=\(i)")
+            var requestitem = request(.GET, "https://api.angel.co/1/jobs?access_token=ea35df8ec5d8542d06b196d4a50bba2ac34616d448bfd3c0&page=\(i)")
             
-            request.responseJSON{
+            requestitem.responseJSON{
                 (request,response,data,error) in
                 self.json = JSON(data!)
                 println(self.json)

@@ -22,6 +22,7 @@
 		66E977DB1ADD849400D56C55 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E977DA1ADD849400D56C55 /* AsyncImageView.swift */; };
 		66E977DD1ADD84A600D56C55 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E977DC1ADD84A600D56C55 /* ImageLoader.swift */; };
 		66E977DF1ADD8E2200D56C55 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E977DE1ADD8E2200D56C55 /* PictureViewController.swift */; };
+		66E977E11ADDCF8900D56C55 /* AngleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E977E01ADDCF8900D56C55 /* AngleListTableViewController.swift */; };
 		EE1AB49050A0160C915C64AB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7FF031834E3F8ED09423F5 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		66E977DA1ADD849400D56C55 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		66E977DC1ADD84A600D56C55 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		66E977DE1ADD8E2200D56C55 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		66E977E01ADDCF8900D56C55 /* AngleListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleListTableViewController.swift; sourceTree = "<group>"; };
 		C3D3EF6EEB1F254446C0F8DC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DC7FF031834E3F8ED09423F5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				66DCBA091ADCE0A4002939B2 /* MainTableViewCell.swift */,
 				66DCBA0B1ADCE2C6002939B2 /* DetailViewController.swift */,
 				66E977DE1ADD8E2200D56C55 /* PictureViewController.swift */,
+				66E977E01ADDCF8900D56C55 /* AngleListTableViewController.swift */,
 				6689736E1ADCD67300CBDA10 /* outSource */,
 				66588BEC1ADCD14A0019BD3D /* Images.xcassets */,
 				66588BEE1ADCD14A0019BD3D /* LaunchScreen.xib */,
@@ -331,6 +334,7 @@
 				66588BE61ADCD14A0019BD3D /* AppDelegate.swift in Sources */,
 				66588C061ADCD24B0019BD3D /* MainViewController.swift in Sources */,
 				66DCBA0C1ADCE2C6002939B2 /* DetailViewController.swift in Sources */,
+				66E977E11ADDCF8900D56C55 /* AngleListTableViewController.swift in Sources */,
 				668973761ADCDD5100CBDA10 /* SwiftyJSON.swift in Sources */,
 				66DCBA0A1ADCE0A4002939B2 /* MainTableViewCell.swift in Sources */,
 				66E977DD1ADD84A600D56C55 /* ImageLoader.swift in Sources */,
