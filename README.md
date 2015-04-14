@@ -1,7 +1,7 @@
 # iOS-Homework4
 #Team Name : WePlan
-Project Name : TBA
-Project Description : TBA
+#Project Name : TBA
+#Project Description : TBA
 #Team Members : 
 1. Kan Chen (kc2386@nyu.edu)
 2. Zhaonan Zhang (zz724@nyu.edu)
