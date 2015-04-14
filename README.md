@@ -1,6 +1,6 @@
 # iOS-Homework4
 #Team Name : WePlan
-Project Name : 
+Project Name :
 Project Description :
 #Team Members : 
 1. Kan Chen (kc2386@nyu.edu)
