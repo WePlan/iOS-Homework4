@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AngleListTableViewController: UITableViewController {
+class AngleListTableViewController: UITableViewController , UISearchBarDelegate {
     
     struct CellData {
         var jobTitle:String
@@ -128,7 +128,7 @@ class AngleListTableViewController: UITableViewController {
 
     }
     */
-
+    
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -137,6 +137,10 @@ class AngleListTableViewController: UITableViewController {
     }
     */
 
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        //
+    }
     /*
     // MARK: - Navigation
 
