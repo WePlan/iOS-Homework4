@@ -11,18 +11,18 @@ import UIKit
 //import Alamofire
 class DataFeedViewController: UIViewController {
     
-    var json:JSON = []
+    var json:[JSON] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        for i in 1...10{
+        for i in 0...9{
             var requestItem = request(.GET, "https://api.angel.co/1/jobs?access_token=ea35df8ec5d8542d06b196d4a50bba2ac34616d448bfd3c0&page=\(i)")
             
             requestItem.responseJSON{
                 (request,response,data,error) in
-                self.json = JSON(data!)
+                self.json[i] = JSON(data!)
                 println(self.json)
                 
-                for (key: String, subJson: JSON) in self.json["jobs"] {
+                for (key: String, subJson: JSON) in self.json[i]["jobs"] {
                     
                     //Job info
                     let jobTitle = subJson["title"].string ?? ""
@@ -33,7 +33,7 @@ class DataFeedViewController: UIViewController {
                     }
                     let createAt = subJson["created_at"].string ?? ""
                     let jobType = subJson["job_type"].string ?? ""
-                    //                println("tag:\(tags)")
+                                    println("tag:\(tags)")
                     
                     //company info
                     if subJson["startup"] != nil{
@@ -44,9 +44,9 @@ class DataFeedViewController: UIViewController {
                         
                         let companyURL = subJson["startup"]["company_url"].string ?? ""
                         let companyFullDesc = subJson["startup"]["product_desc"].string ?? ""
-                        // println("Description:\(jobDesc)")
-                        //println("url_logo:\(img)")
-                        //println("company_short_concept:\(companyShortDesc)")
+                         println("Description:\(jobDesc)")
+                        println("url_logo:\(img)")
+                        println("company_short_concept:\(companyShortDesc)")
                     }
                     
                     
