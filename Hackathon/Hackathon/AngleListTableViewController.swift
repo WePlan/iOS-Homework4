@@ -94,10 +94,12 @@ class AngleListTableViewController: UITableViewController , UISearchBarDelegate 
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("protojob", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("protojob", forIndexPath: indexPath) as! AngleTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = myData[indexPath.row].jobTitle
+        cell.Jobtitle.text = myData[indexPath.row].jobTitle
+        cell.Companytitle.text = myData[indexPath.row].company
+        cell.logourl = NSURL(string: myData[indexPath.row].logoURL)
         return cell
     }
 
