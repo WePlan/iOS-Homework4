@@ -165,16 +165,16 @@
             </objects>
             <point key="canvasLocation" x="309" y="-306"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Angle List Table View Controller-->
         <scene sceneID="le8-as-Lgq">
             <objects>
-                <tableViewController id="b5f-NM-TOQ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RnO-6j-q1H">
+                <tableViewController id="b5f-NM-TOQ" customClass="AngleListTableViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" id="RnO-6j-q1H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qg5-S2-qsi">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="qg5-S2-qsi" customClass="AngleTableViewCell" customModule="Hackathon" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qg5-S2-qsi" id="hIW-lk-vSC">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -187,10 +187,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="7Jv-E3-osy"/>
+                    <connections>
+                        <segue destination="T0P-EX-Hvy" kind="show" identifier="jobDetail" id="fQV-zY-jpD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhY-9S-DNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1083" y="428"/>
+        </scene>
+        <!--Job Detail View Controller-->
+        <scene sceneID="hOG-qx-bME">
+            <objects>
+                <viewController id="T0P-EX-Hvy" customClass="jobDetailViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5IN-iX-vpY"/>
+                        <viewControllerLayoutGuide type="bottom" id="VBG-zP-YcL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SEU-AO-Wsw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gv9-DW-d3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fyA-18-fDj">
