@@ -16,10 +16,16 @@ class AngleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var Jobtitle: UILabel!
     
+    var logourl: NSURL? {
+        didSet{
+            CompanyImage.url = logourl
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
