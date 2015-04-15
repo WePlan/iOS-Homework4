@@ -169,32 +169,59 @@
         <scene sceneID="le8-as-Lgq">
             <objects>
                 <tableViewController id="b5f-NM-TOQ" customClass="AngleListTableViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="22" sectionFooterHeight="22" id="RnO-6j-q1H">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="22" sectionFooterHeight="22" id="RnO-6j-q1H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="protojob" rowHeight="91" id="qg5-S2-qsi" customClass="AngleTableViewCell" customModule="Hackathon" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="protojob" rowHeight="74" id="qg5-S2-qsi" customClass="AngleTableViewCell" customModule="Hackathon" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qg5-S2-qsi" id="hIW-lk-vSC">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0m-wi-Hrk" customClass="AsyncImageView" customModule="Hackathon" customModuleProvider="target">
-                                            <rect key="frame" x="40" y="8" width="70" height="74"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0m-wi-Hrk" customClass="AsyncImageView" customModule="Hackathon" customModuleProvider="target">
+                                            <rect key="frame" x="34" y="17" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="VIf-Hm-28f"/>
+                                                <constraint firstAttribute="width" constant="40" id="Yyk-NJ-3Oq"/>
+                                                <constraint firstAttribute="height" constant="64" id="eS8-IV-77A"/>
+                                                <constraint firstAttribute="height" constant="40" id="rvC-2O-DAi"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="VIf-Hm-28f"/>
+                                                    <exclude reference="eS8-IV-77A"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CompanyName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0G-he-FED">
-                                            <rect key="frame" x="159" y="51" width="120" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CompanyName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLi-hy-Qht">
+                                            <rect key="frame" x="82" y="44" width="107" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JobName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLi-hy-Qht">
-                                            <rect key="frame" x="159" y="16" width="75" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JobName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0G-he-FED">
+                                            <rect key="frame" x="82" y="12" width="89" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="S0m-wi-Hrk" secondAttribute="centerY" id="JoQ-xL-FnS"/>
+                                        <constraint firstItem="i0G-he-FED" firstAttribute="top" secondItem="hIW-lk-vSC" secondAttribute="topMargin" constant="4" id="NRK-gF-CLc"/>
+                                        <constraint firstItem="S0m-wi-Hrk" firstAttribute="leading" secondItem="hIW-lk-vSC" secondAttribute="leadingMargin" constant="26" id="OeS-On-I7r"/>
+                                        <constraint firstItem="i0G-he-FED" firstAttribute="leading" secondItem="hIW-lk-vSC" secondAttribute="leadingMargin" constant="134" id="T2w-nZ-Qn8"/>
+                                        <constraint firstItem="GLi-hy-Qht" firstAttribute="leading" secondItem="S0m-wi-Hrk" secondAttribute="trailing" constant="8" symbolic="YES" id="cTf-Bt-IJY"/>
+                                        <constraint firstItem="i0G-he-FED" firstAttribute="leading" secondItem="hIW-lk-vSC" secondAttribute="leadingMargin" constant="134" id="fm4-Nv-FHX"/>
+                                        <constraint firstItem="i0G-he-FED" firstAttribute="leading" secondItem="S0m-wi-Hrk" secondAttribute="trailing" constant="8" symbolic="YES" id="grS-w0-wx9"/>
+                                        <constraint firstItem="GLi-hy-Qht" firstAttribute="top" secondItem="i0G-he-FED" secondAttribute="bottom" constant="8" symbolic="YES" id="hWP-zN-BLI"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="T2w-nZ-Qn8"/>
+                                            <exclude reference="fm4-Nv-FHX"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="CompanyImage" destination="S0m-wi-Hrk" id="wGk-Ru-SXJ"/>
@@ -215,7 +242,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhY-9S-DNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="420"/>
+            <point key="canvasLocation" x="940" y="423"/>
         </scene>
         <!--Job Detail View Controller-->
         <scene sceneID="hOG-qx-bME">
