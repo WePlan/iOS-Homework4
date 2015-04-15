@@ -148,9 +148,7 @@ class AngleListTableViewController: UITableViewController , UISearchBarDelegate 
         return cell
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -190,8 +188,6 @@ class AngleListTableViewController: UITableViewController , UISearchBarDelegate 
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         //
     }
-    
-    
     /*
     // MARK: - Navigation
 
