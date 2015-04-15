@@ -9,12 +9,31 @@
 import UIKit
 
 class AngleListTableViewController: UITableViewController , UISearchBarDelegate {
+    struct tag {
+        var tagType : String
+        var tagName : String
+    }
     
     struct CellData {
-        var jobTitle:String
-        var company: String
-        var logoURL: String
+        
+        var jobTitle : String
+        var jobType : String
+        var createdAt : String
+        var updatedAt : String
+        var salaryMin : String
+        var salaryMax : String
+        var jobDesc : String
+        var angellistURL : String
+        
+        var companyName : String
+        var companyFDesc : String
+        var companyHDesc : String
+        var companyLogoURL : String
+        var companyURL : String
+        
+        var tags : [tag]
     }
+    
     
     var myData: [CellData] = []
     
@@ -36,34 +55,60 @@ class AngleListTableViewController: UITableViewController , UISearchBarDelegate 
                 
                 for (key: String, subJson: JSON) in json["jobs"] {
                     var newData: CellData?
-                    
                     //Job info
                     let jobTitle = subJson["title"].string ?? ""
-                    let jobDesc = subJson["description"].string ?? ""
-                    var tags = [String]()
-                    for (keyTag: String, tag: JSON) in subJson["tags"]{
-                        tags.append(tag["display_name"].string ?? "")
-                    }
-                    let createAt = subJson["created_at"].string ?? ""
                     let jobType = subJson["job_type"].string ?? ""
-                    //                println("tag:\(tags)")
-//                    newData.jobTitle = jobTitle
+                    let jobDesc = subJson["description"].string ?? ""
+                    let createAt = subJson["created_at"].string ?? ""
+                    let updateAt = subJson["updated_at"].string ?? ""
+                    let salaryMin = subJson["salary_min"].string ?? ""
+                    let salaryMax = subJson["salary_max"].string ?? ""
+                    let angellistURL = subJson["angellist_url"].string ?? ""
+                    
                     //company info
-                    if subJson["startup"] != nil{
-                        let companyName = subJson["startup"]["name"].string ?? ""
-                        let img = subJson["startup"]["logo_url"].string ?? "no image"
-                        let smallImg = subJson["startup"]["thumb_url"].string ?? ""
-                        let companyShortDesc = subJson["startup"]["high_concept"].string ?? ""
-                        
-                        let companyURL = subJson["startup"]["company_url"].string ?? ""
-                        let companyFullDesc = subJson["startup"]["product_desc"].string ?? ""
-                        // println("Description:\(jobDesc)")
-                        //println("url_logo:\(img)")
-                        //println("company_short_concept:\(companyShortDesc)")
-                        newData = CellData(jobTitle: jobTitle, company: companyName, logoURL: img)
-//                        newData.company = companyName
-//                        newData.logoURL = img
+                    
+                    let companyName = subJson["startup"]["name"].string ?? ""
+                    let companyFDesc = subJson["startup"]["product_desc"].string ?? ""
+                    let companyHDesc = subJson["startup"]["high_concept"].string ?? ""
+                    let img = subJson["startup"]["logo_url"].string ?? "no image"
+                    let companyURL = subJson["startup"]["company_url"].string ?? ""
+                    
+                    //tags info
+                    var tags = [tag]()
+                    for (keyTag: String, eachtag: JSON) in subJson["tags"]{
+                        let tagType = eachtag["tag_type"].string ?? ""
+                        let tagName = eachtag["display_name"].string ?? ""
+                        tags.append(tag(tagType: tagType, tagName: tagName))
                     }
+                    
+                    newData = CellData(jobTitle: jobTitle, jobType: jobType, createdAt: createAt, updatedAt: updateAt, salaryMin: salaryMin, salaryMax: salaryMax, jobDesc: jobDesc, angellistURL: angellistURL, companyName: companyName, companyFDesc: companyFDesc, companyHDesc: companyHDesc, companyLogoURL: img, companyURL: companyURL, tags: tags)
+//                    //Job info
+//                    let jobTitle = subJson["title"].string ?? ""
+//                    let jobDesc = subJson["description"].string ?? ""
+//                    var tags = [String]()
+//                    for (keyTag: String, tag: JSON) in subJson["tags"]{
+//                        tags.append(tag["display_name"].string ?? "")
+//                    }
+//                    let createAt = subJson["created_at"].string ?? ""
+//                    let jobType = subJson["job_type"].string ?? ""
+//                    //                println("tag:\(tags)")
+////                    newData.jobTitle = jobTitle
+//                    //company info
+//                    if subJson["startup"] != nil{
+//                        let companyName = subJson["startup"]["name"].string ?? ""
+//                        let img = subJson["startup"]["logo_url"].string ?? "no image"
+//                        let smallImg = subJson["startup"]["thumb_url"].string ?? ""
+//                        let companyShortDesc = subJson["startup"]["high_concept"].string ?? ""
+//                        
+//                        let companyURL = subJson["startup"]["company_url"].string ?? ""
+//                        let companyFullDesc = subJson["startup"]["product_desc"].string ?? ""
+//                        // println("Description:\(jobDesc)")
+//                        //println("url_logo:\(img)")
+//                        //println("company_short_concept:\(companyShortDesc)")
+//                        newData = CellData(jobTitle: jobTitle, company: companyName, logoURL: img)
+////                        newData.company = companyName
+////                        newData.logoURL = img
+//                    }
                     if newData != nil {
                         self.myData.append(newData!)
                     }
@@ -98,8 +143,8 @@ class AngleListTableViewController: UITableViewController , UISearchBarDelegate 
 
         // Configure the cell...
         cell.Jobtitle.text = myData[indexPath.row].jobTitle
-        cell.Companytitle.text = myData[indexPath.row].company
-        cell.logourl = NSURL(string: myData[indexPath.row].logoURL)
+        cell.Companytitle.text = myData[indexPath.row].companyName
+        cell.logourl = NSURL(string: myData[indexPath.row].companyLogoURL)
         return cell
     }
 
